@@ -1,0 +1,37 @@
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+select:hover,
+select:focus,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+option { 
+    background-color: color; 
+    border-radius: value; 
+    font-size: value 
+}
+
+.select{
+    padding : 30px I !important;
+}
+
+.text-color{
+    color : #616161 !important;
+}
+
+.bg-voilet{
+    background-color : rgb(147, 112, 219) !important;
+}
