@@ -1,7 +1,318 @@
+import BreadCrumb from "../../components/BreadCrumb";
+import {FaAngleDown} from 'react-icons/fa'
+import DataTable from 'react-data-table-component';
+import {FaPencilAlt,FaTrashAlt} from 'react-icons/fa'
+import { formatSlashDate, numberWithCommas } from "../../utils";
+import './style.css'
+import React from "react";
+import {FaArrowUp , FaArrowDown} from 'react-icons/fa'
 const ImportExport = (props) =>{
+    const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
+    const columns = [
+        {
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Product</h6>,
+            selector: row => <div>
+                               <img src={require('../../assets/images/product.png')}  style={{width : 50}}/>
+                               <div style={{fontSize : 14, fontWeight : 500, color :'#303030'}} className="d-inline-block mx-2">{row.name}</div>
+                             </div>,
+            style:{
+                paddingTop : 20, paddingBottom : 20
+            },
+            width : '250px'
+        },
+        {
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Code</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{row.code}</div>,
+        },
+        {
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Category</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{row.category.name}</div>,
+        },
+        {
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Price</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{numberWithCommas(row.price)}/KG</div>,
+        },
+        {
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Quantity</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{row.quantity}</div>,
+        },
+        {
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Inventory</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{row.inventory}</div>,
+        },
+        // {
+        //     name: <h6>Date</h6>,
+        //     selector: row => <div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{formatSlashDate(row.createdAt)}</div>,
+        // },
+        {
+            name: <h6>Action</h6>,
+            selector: row => 
+                <div className="d-block text-center" style={{textAlign : 'center'}}>
+                  <button className="btn btn-sm btn-color-green rounded-3 mx-1">
+                    <FaPencilAlt />
+                  </button>
+                  <button className="btn btn-sm btn-secondary rounded-3 mx-1">
+                    <FaTrashAlt />
+                  </button>
+                </div>
+            
+        },
+    ];
+    
+    const data = [
+        {
+            id: 1,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 2,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 3,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 4,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 5,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 6,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 7,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 8,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 9,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 10,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        {
+            id: 11,
+            name: 'Seasonal Fruit',
+            code : 'CO1234',
+            category : {
+                name : 'Fruit',
+            },
+            price : 1500,
+            quantity : 25,
+            inventory : 25,
+            createdAt: '2021-10-13T12:05:45Z',
+        },
+        
+    ]
+
+
+    const rowDisabledCriteria = row => row.id = 2;
+
+    const rowSelectCriteria = row => row.id > 6;
+
+    const [selectedRows, setSelectedRows] = React.useState(false);
+    const [toggledClearRows, setToggleClearRows] = React.useState(false);
+
+    const handleChange = ({ selectedRows }) => {
+        setSelectedRows(selectedRows);
+    };
+
+    // Toggle the state so React Data Table changes to clearSelectedRows are triggered
+    const handleClearRows = () => {
+        setToggleClearRows(!toggledClearRows);
+    }
+
     return(
-        <div>
-            <h1>Import Export</h1>
+        <div className="container-fluid py-sm-4 py-md-4 py-lg-4">
+            <BreadCrumb 
+              title="Import Export"
+              subTitle="Report"
+              icon="FaBoxOpen"
+            />
+
+            <div className="row my-5">
+               <div className="col-8">
+                 <div className="shadow p-3" style={{backgroundColor : 'white'}}>
+                    <h6>Country wise statistics</h6>
+                 </div>
+               </div>
+               <div className="col-4">
+                 <div className="shadow p-3" style={{backgroundColor : 'white'}}>
+                  <h6 className="fw-normal p-0 m-0 mb-2" style={{height : 12}}>Country wise statistics</h6>
+                  <div className="m-0 p-0">
+                    <div style={{fontSize : 12, height : 14}} className="p-0 m-0 fw-normal mt-2">United Kingdom
+                      <span className="float-end">800
+                        <FaArrowUp className="text-success fst-normal ms-1"/>
+                      </span>
+                    </div>
+                    <div style={{fontSize : 14, height : 16}} className="p-0 m-0 fw-normal mt-2">73%
+                      <span className="float-end"  style={{color : 'lightgray', fontSize : 12}}>13:16</span>
+                    </div>
+
+                    <div className="progress my-2" style={{ height : 5}}>
+                        <div className="progress-bar bg-voilet" role="progressbar" style={{width: '75%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div className="m-0 p-0">
+                    <div style={{fontSize : 12, height : 14}} className="p-0 m-0 fw-normal mt-2">Ireland
+                      <span className="float-end">-200
+                        <FaArrowDown className="text-danger fst-normal ms-1"/>
+                      </span>
+                    </div>
+                    <div style={{fontSize : 14, height : 16}} className="p-0 m-0 fw-normal mt-2">3%
+                      <span className="float-end"  style={{color : 'lightgray', fontSize : 12}}>13:16</span>
+                    </div>
+                    <div className="progress my-2" style={{ height : 5}}>
+                        <div className="progress-bar bg-voilet" role="progressbar" style={{width: '3%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+
+                  <div className="m-0 p-0">
+                    <div style={{fontSize : 12, height : 14}} className="p-0 m-0 fw-normal mt-2">Qatar
+                      <span className="float-end">100
+                        <FaArrowUp className="text-success fst-normal ms-1"/>
+                      </span>
+                    </div>
+                    <div style={{fontSize : 14, height : 16}} className="p-0 m-0 fw-normal mt-2">19%
+                      <span className="float-end"  style={{color : 'lightgray', fontSize : 12}}>13:16</span>
+                    </div>
+                    <div className="progress my-2" style={{ height : 5}}>
+                        <div className="progress-bar bg-voilet" role="progressbar" style={{width: '19%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  {/* FaArrowUp */}
+                  <div className="m-0 p-0">
+                    <div style={{fontSize : 12, height : 14}} className="p-0 m-0 fw-normal mt-2">Kuwait
+                      <span className="float-end">-450
+                        <FaArrowDown className="text-danger fst-normal ms-1"/>
+                      </span>
+                    </div>
+                    <div style={{fontSize : 14, height : 16}} className="p-0 m-0 fw-normal mt-2">27%
+                      <span className="float-end"  style={{color : 'lightgray', fontSize : 12}}>13:16</span>
+                    </div>
+                    <div className="progress my-2" style={{ height : 5}}>
+                        <div className="progress-bar bg-voilet" role="progressbar" style={{width: '27%'}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                 </div>
+               </div>
+            </div>
+
+            <div className="mt-4 py-4">
+                <small className="text-color fw-bolder">Show</small>
+                <select className="mx-2" style={{width : 50}}>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                </select>
+                <small className="text-color fw-bolder">entries</small>
+            </div>
+            <div className="w-100 shadow rounded-3">
+                <DataTable
+                    columns={columns}
+                    data={data}
+                    pagination
+                    selectableRows
+                    expandableRowsComponent={ExpandedComponent}
+                    onSelectedRowsChange={handleChange}
+                    clearSelectedRows={toggledClearRows}
+                    // selectableRowSelected={rowSelectCriteria}
+                    // selectableRowDisabled={rowDisabledCriteria}
+                />
+            </div>
         </div>
     )
 }

@@ -31,3 +31,7 @@ option {
 .text-color{
     color : #616161 !important;
 }
+
+.bg-voilet{
+    background-color : rgb(147, 112, 219) !important;
+}

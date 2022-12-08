@@ -217,8 +217,16 @@ const List = (props) =>{
               subTitle="Product"
               icon="FaBoxOpen"
             />
-
-            <div className="w-100 shadow rounded-3 mt-5">
+            <div className="mt-4 py-4">
+                <small className="text-color fw-bolder">Show</small>
+                <select className="mx-2" style={{width : 50}}>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                </select>
+                <small className="text-color fw-bolder">entries</small>
+            </div>
+            <div className="w-100 shadow rounded-3">
                 <DataTable
                     columns={columns}
                     data={data}
