@@ -10,52 +10,51 @@ const ImportExport = (props) =>{
     const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
     const columns = [
         {
-            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Product</h6>,
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Product</h6>,
             selector: row => <div>
                                <img src={require('../../assets/images/product.png')}  style={{width : 50}}/>
-                               <div style={{fontSize : 14, fontWeight : 500, color :'#303030'}} className="d-inline-block mx-2">{row.name}</div>
+                               <div style={{fontSize : 14, fontWeight : 500, color :'#303030'}} className="d-inline-block mx-2">Mustard</div>
                              </div>,
             style:{
                 paddingTop : 20, paddingBottom : 20
             },
-            width : '250px'
+            width : '160px'
         },
         {
-            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Code</h6>,
-            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{row.code}</div>,
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Date</h6>,
+            selector: row => <div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{formatSlashDate(row.createdAt)}</div>,
         },
         {
-            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Category</h6>,
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Category</h6>,
             selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{row.category.name}</div>,
         },
         {
-            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Price</h6>,
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Country</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>
+                <a href="#" className="text-decoration-none">India</a>
+            </div>,
+        },
+        {
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Price</h6>,
             selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{numberWithCommas(row.price)}/KG</div>,
         },
         {
-            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Quantity</h6>,
-            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{row.quantity}</div>,
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Volume</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>253kg</div>,
         },
         {
-            name: <h6 style={{paddingTop : 20, paddingBottom : 20}}>Inventory</h6>,
-            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{row.inventory}</div>,
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Supplier</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>
+                                <a href="#" className="text-decoration-none">LKL Services</a>
+                            </div>,
         },
-        // {
-        //     name: <h6>Date</h6>,
-        //     selector: row => <div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>{formatSlashDate(row.createdAt)}</div>,
-        // },
         {
-            name: <h6>Action</h6>,
-            selector: row => 
-                <div className="d-block text-center" style={{textAlign : 'center'}}>
-                  <button className="btn btn-sm btn-color-green rounded-3 mx-1">
-                    <FaPencilAlt />
-                  </button>
-                  <button className="btn btn-sm btn-secondary rounded-3 mx-1">
-                    <FaTrashAlt />
-                  </button>
-                </div>
-            
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Additional Services</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>Air, Land, Sea, Transport</div>,
+        },
+        {
+            name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Status</h6>,
+            selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>Exported</div>,
         },
     ];
     
@@ -222,12 +221,24 @@ const ImportExport = (props) =>{
 
             <div className="row my-5">
                <div className="col-8">
-                 <div className="shadow p-3" style={{backgroundColor : 'white'}}>
-                    <h6>Country wise statistics</h6>
+                 <div className="shadow p-3 rounded-3" style={{backgroundColor : 'white'}}>
+                    <h6>Import / Export Graph</h6>
+                    <div className="d-inline-block mt-1">
+                       <span className="d-block" style={{fontSize : 10, height : 10, color : 'gray'}}>This Month</span>
+                       <span className="d-block" style={{fontSize : 22, color : '#1FB471'}}>
+                           $86,589
+                       </span>
+                    </div>
+                    <div className="d-inline-block mx-3 mt-1">
+                       <span className="d-block" style={{fontSize : 10, height : 10, color : 'gray'}}>Last Month</span>
+                       <span className="d-block" style={{fontSize : 22, color : '#1FB471'}}>
+                           $86,589
+                       </span>
+                    </div>
                  </div>
                </div>
                <div className="col-4">
-                 <div className="shadow p-3" style={{backgroundColor : 'white'}}>
+                 <div className="shadow p-3 rounded-3" style={{backgroundColor : 'white'}}>
                   <h6 className="fw-normal p-0 m-0 mb-2" style={{height : 12}}>Country wise statistics</h6>
                   <div className="m-0 p-0">
                     <div style={{fontSize : 12, height : 14}} className="p-0 m-0 fw-normal mt-2">United Kingdom
@@ -290,6 +301,7 @@ const ImportExport = (props) =>{
                  </div>
                </div>
             </div>
+            <h5>Report</h5>
 
             <div className="mt-4 py-4">
                 <small className="text-color fw-bolder">Show</small>
