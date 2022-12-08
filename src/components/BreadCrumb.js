@@ -1,5 +1,5 @@
 import '../layouts/style.css'
-import {FaCubes,FaAngleDoubleRight, FaBoxOpen,FaInbox} from 'react-icons/fa'
+import {FaCubes,FaAngleDoubleRight, FaBoxOpen,FaInbox,FaClipboardList} from 'react-icons/fa'
 const BreadCrumb = (props) => {
     return(
         <div className="d-black align-middle">
@@ -16,6 +16,10 @@ const BreadCrumb = (props) => {
              {
                 props.icon === 'FaInbox' &&
                 <FaInbox className='color-green me-2 fw-lighter'/>
+             }
+             {
+                props.icon === 'FaClipboardList' &&
+                <FaClipboardList className='color-green me-2 fw-lighter'/>
              }
              <FaAngleDoubleRight className='fw-normal'/>
              <span className='mx-2 color-green'>{props.subTitle}</span>
