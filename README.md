@@ -4,7 +4,7 @@ This project based on React Js , Bootstrap 5, Redux, Redux-Thunk, Axios, react-r
 
 ###
 Live link 
-[a link] (https://agri-tech.netlify.app)
+[agri-tech] (https://agri-tech.netlify.app)
 
 ## Available Scripts
 
