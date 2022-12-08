@@ -16,8 +16,12 @@ export const apiErrors = (errors) => {
     }
     else{
         // toast.error(errors, toastObj)
-    }
-    
+    }  
+}
+
+
+export const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export  const formatSlashDate = (date) => {

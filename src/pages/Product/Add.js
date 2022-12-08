@@ -1,5 +1,6 @@
 import BreadCrumb from "../../components/BreadCrumb";
 import {FaAngleDown} from 'react-icons/fa'
+import './style.css'
 const Add = (props) =>{
     return(
         <div className="container-fluid py-sm-4 py-md-4 py-lg-4">
@@ -90,9 +91,6 @@ const Add = (props) =>{
                             </div>
                         </div>
                     </div>
-
-                    
-
                     <div className="my-4 mt-5">
                        <button className="btn btn-md btn-green rounded-3 me-3">Add Product</button>
                        <button className="btn btn-md btn-secondary rounded-3">Reset</button>
