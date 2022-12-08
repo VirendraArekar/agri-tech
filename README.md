@@ -2,6 +2,10 @@
 
 This project based on React Js , Bootstrap 5, Redux, Redux-Thunk, Axios, react-router-dom 6
 
+###
+Live link 
+[a link] (https://agri-tech.netlify.app)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -19,4 +23,6 @@ Launches the test runner in the interactive watch mode.\
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+
 
