@@ -2,8 +2,6 @@
 
 This project based on React Js , Bootstrap 5, Redux, Redux-Thunk, Axios, react-router-dom 6
 
-###
-Live link 
 [agri-tech] (https://agri-tech.netlify.app)
 
 ## Available Scripts
