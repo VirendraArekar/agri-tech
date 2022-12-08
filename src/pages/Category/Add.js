@@ -1,4 +1,4 @@
-import BreadCrumb from "../../compaonents/BreadCrumb";
+import BreadCrumb from "../../components/BreadCrumb";
 const Add = (props) =>{
     return(
         <div className="container-fluid py-sm-4 py-md-4 py-lg-4">

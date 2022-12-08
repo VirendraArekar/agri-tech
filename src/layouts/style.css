@@ -44,6 +44,15 @@ a:hover{
   color : white !important;
 }
 
+.btn-color-green{
+  background-color: #1FB471 !important;
+  color : white !important;
+}
+.btn-xs{
+  width : 20px !important;
+  height : 20px !important;
+}
+
 .color-green{
   color : #007842 !important;
 }

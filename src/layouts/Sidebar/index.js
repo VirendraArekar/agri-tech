@@ -40,7 +40,7 @@ const Sidebar = (props) => {
                                 <nav className="sb-sidenav-menu-nested nav py-2">
                                     <Link className="nav-link fw-light py-1" to="/categories">List</Link>
                                     <Link className="nav-link fw-light py-1" to="/category/add">Add</Link>
-                                    <Link className="nav-link fw-light py-1 pb-3" to="/categories/edit/3">Edit</Link>
+                                    <Link className="nav-link fw-light py-1 pb-3" to="/category/edit/3">Edit</Link>
                                 </nav>
                             </div>
 
