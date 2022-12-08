@@ -48,6 +48,11 @@ a:hover{
   background-color: #1FB471 !important;
   color : white !important;
 }
+
+th {
+  background-color: red;
+}
+
 .btn-xs{
   width : 20px !important;
   height : 20px !important;
