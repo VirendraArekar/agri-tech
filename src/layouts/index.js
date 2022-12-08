@@ -25,7 +25,7 @@ const toggle = async(e) => {
             <Sidebar />
             <div id="layoutSidenav_content">
                 <main style={{backgroundColor: '#F5F5F5'}} className="w-100 h-100">
-                    <div className="container-fluid px-4" >
+                    <div className="container-fluid px-2" >
                        {props.children}
                     </div>
                 </main>
