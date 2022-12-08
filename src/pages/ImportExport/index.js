@@ -303,7 +303,7 @@ const ImportExport = (props) =>{
             </div>
             <h5>Report</h5>
 
-            <div className="mt-4 py-4">
+            <div className="mt-4 py-4 mb-4">
                 <small className="text-color fw-bolder">Show</small>
                 <select className="mx-2" style={{width : 50}}>
                     <option>10</option>
@@ -311,6 +311,10 @@ const ImportExport = (props) =>{
                     <option>50</option>
                 </select>
                 <small className="text-color fw-bolder">entries</small>
+
+                <div className="float-end">
+                  <button className="btn btn-md btn-green rounded-3 me-3">Download Data</button>
+                </div>
             </div>
             <div className="w-100 shadow rounded-3">
                 <DataTable
