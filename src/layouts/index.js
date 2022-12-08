@@ -1,8 +1,8 @@
 
 import './style.css';
-import $ from 'jquery';
-import Popper from 'popper.js';
-import { FaHome, FaBars, FaDotCircle, FaCubes, FaBoxOpen, FaClipboardList, FaMobileAlt,  FaClipboard, FaFileInvoice, FaInbox, FaCircle, FaUser, FaAngleRight, FaAngleDown} from "react-icons/fa";
+// import $ from 'jquery';
+// import Popper from 'popper.js';
+
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 

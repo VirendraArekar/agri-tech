@@ -1,6 +1,6 @@
-import Layouts from './layouts'
-import { useDispatch, useSelector } from "react-redux";
-import { addData, deleteData } from "./store/actions/todoAction";
+// import Layouts from './layouts'
+// import { useDispatch, useSelector } from "react-redux";
+// import { addData, deleteData } from "./store/actions/todoAction";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from './pages/Auth/Login'
 import Dashboard from './pages/Dashboard'
@@ -29,21 +29,19 @@ import Storage from './pages/Storage'
 import ProtectedWrapper from './routes/ProtectedWrapper';
 
 const App = (props) => {
-    const dispatch = useDispatch();
-    // Selects the state value from the store.
-    const todo = useSelector((state) => state.data.todo);
-    // Dispatches action to add the data
-    const handleAddData = ()=>dispatch(addData());
-    // Dispatches action to delete the data.
-    const handleDeleteData = ()=>dispatch(deleteData());
-        {/* redux */}
-        {/* <div>
-            <button onClick={handleAddData}>Add Data</button>
-            <button onClick={handleDeleteData}>Delete Data</button>
-        
-            {todo && <div>{JSON.stringify(todo)}</div>}
-        </div> */}
-
+    // const dispatch = useDispatch();
+    // // Selects the state value from the store.
+    // const todo = useSelector((state) => state.data.todo);
+    // // Dispatches action to add the data
+    // const handleAddData = ()=>dispatch(addData());
+    // // Dispatches action to delete the data.
+    // const handleDeleteData = ()=>dispatch(deleteData());
+    // <div>
+    //     <button onClick={handleAddData}>Add Data</button>
+    //     <button onClick={handleDeleteData}>Delete Data</button>
+    
+    //     {todo && <div>{JSON.stringify(todo)}</div>}
+    // </div> 
     return(
         <Router>
             <Routes>

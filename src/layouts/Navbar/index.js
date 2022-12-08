@@ -1,13 +1,21 @@
-import { FaHome, FaBars, FaDotCircle, FaCubes, FaBoxOpen, FaClipboardList, FaMobileAlt,  FaClipboard, FaFileInvoice, FaInbox, FaCircle, FaUser, FaAngleRight, FaAngleDown} from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { FaBars,FaUser} from "react-icons/fa";
 const Navbar = (props) => {
+    const navigate = useNavigate();
+    const signOut = async(e) => {
+        e.preventDefault();
+        await localStorage.removeItem('token');
+        await localStorage.clear();
+        return navigate("/login");
+    }
     return(
         <nav className="sb-topnav navbar navbar-expand navbar-default bg-default" 
         style={{height : 65,backgroundColor : 'white !important'}}>
-            <a className="navbar-brand ps-3  py-sm-4 py-md-4 py-lg-4 link-dark fw-bolder" href="index.html">
-                <img src={require('../../assets/images/logo.png')} className="p-sm-2 p-md-2 p-lg-2" style={{width : 60}}/>
+            <Link className="navbar-brand ps-3  py-sm-4 py-md-4 py-lg-4 link-dark fw-bolder" to="/">
+                <img src={require('../../assets/images/logo.png')} className="p-sm-2 p-md-2 p-lg-2" style={{width : 60}} alt="logo"/>
                 IEFP
-            </a>
-            <button className="btn  btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!" onClick={(e) => props.toggle(e)}>
+            </Link>
+            <button className="btn  btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle"  onClick={(e) => props.toggle(e)}>
                 <FaBars />
             </button>
             <form className="d-none d-md-inline-block form-inline me-0 me-md-3 my-2 my-md-0 m-md-4" style={{width: '60%'}}>
@@ -22,13 +30,12 @@ const Navbar = (props) => {
                     <small  style={{fontSize: 12, color: 'gray'}}>Available</small>
                 </div>
                 <li className="nav-item dropdown me-3">
-                    <a className="nav-link link-secondary dropdown-toggle fw-light text-color" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><FaUser /></a>
+                    <Link className="nav-link link-secondary dropdown-toggle fw-light text-color" id="navbarDropdown" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><FaUser /></Link>
                     <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a className="dropdown-item text-color fw-light" href="#!">Settings</a></li>
-                        <li><a className="dropdown-item text-color fw-light" href="#!">Profile</a></li>
-                        <li><a className="dropdown-item text-color fw-light" href="#!">Change Password</a></li>
-                        <li><hr className="dropdown-divider text-color fw-light" /></li>
-                        <li><a className="dropdown-item text-color fw-light" href="#!">Logout</a></li>
+                        <li><Link className="dropdown-item text-color fw-light" to="#!">Settings</Link></li>
+                        <li><Link className="dropdown-item text-color fw-light" to="#!">Profile</Link></li>
+                        <li><Link className="dropdown-item text-color fw-light" to="#!">Change Password</Link></li>
+                        <li><Link className="dropdown-item text-color fw-light" to="#!" onClick={signOut}>Logout</Link></li>
                     </ul>
                 </li>
             </ul>

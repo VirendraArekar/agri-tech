@@ -1,4 +1,4 @@
-import { FaHome, FaBars, FaDotCircle, FaCubes, FaBoxOpen, FaClipboardList, FaMobileAlt,  FaClipboard, FaFileInvoice, FaInbox, FaCircle, FaUser, FaAngleRight, FaAngleDown} from "react-icons/fa";
+import { FaHome, FaDotCircle, FaCubes, FaBoxOpen, FaClipboardList, FaMobileAlt,  FaClipboard, FaFileInvoice, FaInbox, FaAngleDown} from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Sidebar = (props) => {
     return(
@@ -14,13 +14,13 @@ const Sidebar = (props) => {
                                 </div>
                                 Dashboard
                             </Link>
-                            <a className="nav-link collapsed mt-2 text-color py-2 fw-light" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <Link className="nav-link collapsed mt-2 text-color py-2 fw-light" to="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div className="sb-nav-link-icon">
                                   <FaDotCircle/>
                                 </div>
                                 Sliders
                                 <div className="sb-sidenav-collapse-arrow"><FaAngleDown /></div>
-                            </a>
+                            </Link>
                             <div className="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav className="sb-sidenav-menu-nested nav py-2">
                                     <Link className="nav-link fw-light py-1" to="/sliders">List</Link>
@@ -29,13 +29,13 @@ const Sidebar = (props) => {
                                 </nav>
                             </div>
 
-                            <a className="nav-link collapsed mt-2 text-color py-2 fw-light nav-link-active" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
+                            <Link className="nav-link collapsed mt-2 text-color py-2 fw-light nav-link-active" to="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
                                 <div className="sb-nav-link-icon">
                                   <FaCubes />
                                 </div>
                                 Category
                                 <div className="sb-sidenav-collapse-arrow"><FaAngleDown /></div>
-                            </a>
+                            </Link>
                             <div className="collapse" id="collapseCategory" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav className="sb-sidenav-menu-nested nav py-2">
                                     <Link className="nav-link fw-light py-1" to="/categories">List</Link>
@@ -44,27 +44,27 @@ const Sidebar = (props) => {
                                 </nav>
                             </div>
 
-                            <a className="nav-link collapsed mt-2 text-color py-2 fw-light nav-link-active" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategorys" aria-expanded="false" aria-controls="collapseCategorys">
+                            <Link className="nav-link collapsed mt-2 text-color py-2 fw-light nav-link-active" to="#" data-bs-toggle="collapse" data-bs-target="#collapseCategorys" aria-expanded="false" aria-controls="collapseCategorys">
                                 <div className="sb-nav-link-icon"><FaCubes /></div>
                                 Sub Category
                                 <div className="sb-sidenav-collapse-arrow"><FaAngleDown /></div>
-                            </a>
+                            </Link>
                             <div className="collapse" id="collapseCategorys" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav className="sb-sidenav-menu-nested nav py-2">
                                     <Link className="nav-link fw-light py-1" to="/sub-categories">List</Link>
                                     <Link className="nav-link fw-light py-1 active-sidebar" to="/sub-category/add">Add</Link>
-                                    <Link className="nav-link fw-light py-1 pb-3" href="/sub-category/edit/3">Edit</Link>
+                                    <Link className="nav-link fw-light py-1 pb-3" to="/sub-category/edit/3">Edit</Link>
                                 </nav>
                             </div>
 
 
-                            <a className="nav-link collapsed mt-2 text-color py-2 fw-light nav-link-active" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
+                            <Link className="nav-link collapsed mt-2 text-color py-2 fw-light nav-link-active" to="#" data-bs-toggle="collapse" data-bs-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
                                 <div className="sb-nav-link-icon">
                                   <FaBoxOpen />
                                 </div>
                                 Products
                                 <div className="sb-sidenav-collapse-arrow"><FaAngleDown /></div>
-                            </a>
+                            </Link>
                             <div className="collapse" id="collapseProducts" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav className="sb-sidenav-menu-nested nav py-2">
                                     <Link className="nav-link fw-light py-1" to="/products">List</Link>
