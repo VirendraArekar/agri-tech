@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import ErrorImg from './error-404-monochrome.svg'
 import { FaArrowLeft } from 'react-icons/fa';
+import Title from '../../components/Title'
 
 const NotFound = () => {
+    Title('Not Found')
     return(
         <div id="layoutError" className='my-5 py-5'>
             <div id="layoutError_content">

@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import { Navigate } from "react-router-dom";
+import Title from '../../components/Title'
 
 const Login  = (props) => {
     const [token, setToken] = useState('')
+    Title('Login')
     const onSubmit = async(e) => {
         e.preventDefault();
         let data = await localStorage.setItem('token','I am Virendra Arekar');

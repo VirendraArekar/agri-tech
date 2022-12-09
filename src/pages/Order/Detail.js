@@ -1,9 +1,10 @@
 import BreadCrumb from "../../components/BreadCrumb";
 import {BsFillCircleFill} from 'react-icons/bs'
 import './style.css'
+import Title from '../../components/Title'
 
 const Detail = (props) =>{
-    
+    Title('Order Detail')
     return(
         <div className="container-fluid py-sm-4 py-md-4 py-lg-4">
             <BreadCrumb 

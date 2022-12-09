@@ -1,5 +1,7 @@
 import BreadCrumb from "../../components/BreadCrumb";
+import Title from '../../components/Title'
 const Edit = (props) =>{
+    Title('Edit Category')
     return(
         <div className="container-fluid py-sm-4 py-md-4 py-lg-4">
             <BreadCrumb 

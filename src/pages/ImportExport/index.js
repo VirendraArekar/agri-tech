@@ -6,7 +6,9 @@ import { formatSlashDate, numberWithCommas } from "../../utils";
 import './style.css'
 import React from "react";
 import {FaArrowUp , FaArrowDown} from 'react-icons/fa'
+import Title from '../../components/Title'
 const ImportExport = (props) =>{
+    Title('Import Export')
     const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
     const columns = [
         {

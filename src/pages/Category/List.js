@@ -3,8 +3,10 @@ import DataTable from 'react-data-table-component';
 import {FaPencilAlt,FaTrashAlt} from 'react-icons/fa'
 import { formatSlashDate } from "../../utils";
 import React from "react";
+import Title from '../../components/Title'
 
 const List = (props) =>{
+    Title('List Category')
     const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
     const columns = [
         {

@@ -8,7 +8,9 @@ import React from "react";
 import {FaArrowUp , FaArrowDown, FaBoxOpen} from 'react-icons/fa'
 import {BsCurrencyDollar, BsClockHistory} from 'react-icons/bs'
 import {FiShoppingBag} from 'react-icons/fi'
+import Title from '../../components/Title'
 const Storage = (props) =>{
+    Title('Storage')
     const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
     const columns = [
         {

@@ -1,5 +1,7 @@
 import BreadCrumb from "../../components/BreadCrumb";
+import Title from '../../components/Title'
 const Add = (props) =>{
+    Title('Add Category')
     return(
         <div className="container-fluid py-sm-4 py-md-4 py-lg-4">
             <BreadCrumb 

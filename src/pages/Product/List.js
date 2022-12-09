@@ -2,9 +2,11 @@ import BreadCrumb from "../../components/BreadCrumb";
 import DataTable from 'react-data-table-component';
 import {FaPencilAlt,FaTrashAlt} from 'react-icons/fa'
 import { formatSlashDate, numberWithCommas } from "../../utils";
+import Title from '../../components/Title'
 import React from "react";
 
 const List = (props) =>{
+    Title("Product List")
     const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
     const columns = [
         {

@@ -5,8 +5,15 @@ import { formatSlashDate } from "../../utils";
 import React from "react";
 import {BsFillCircleFill} from 'react-icons/bs'
 import {FaEye} from 'react-icons/fa'
+import Title from '../../components/Title'
+import { useNavigate } from "react-router-dom";
 
 const Order = (props) =>{
+    const navigate = useNavigate();
+    Title('Orders')
+    const orderDetail = () => {
+        navigate('/order/detail/3')
+    }
     const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
     const columns = [
         {
@@ -183,7 +190,7 @@ const Order = (props) =>{
                 <small className="text-color fw-bolder">entries</small>
 
                 <div className="float-end">
-                  <button className="btn btn-md btn-green rounded-3 me-3">Download Data</button>
+                  <button className="btn btn-md btn-green rounded-3 me-3"  onClick={orderDetail}>Download Data</button>
                 </div>
             </div>
 

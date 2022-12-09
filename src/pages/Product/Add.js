@@ -1,7 +1,9 @@
 import BreadCrumb from "../../components/BreadCrumb";
 import {FaAngleDown} from 'react-icons/fa'
 import './style.css'
+import Title from '../../components/Title'
 const Add = (props) =>{
+    Title('Add Product')
     return(
         <div className="container-fluid py-sm-4 py-md-4 py-lg-4">
             <BreadCrumb 
