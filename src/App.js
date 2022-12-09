@@ -19,6 +19,7 @@ import SubCategoryEdit from './pages/SubCategory/Edit'
 import Products from './pages/Product/List'
 import ProductAdd from './pages/Product/Add'
 import ProductEdit from './pages/Product/Edit'
+import ProductDetail from './pages/Product/Detail'
 
 import Orders from './pages/Order'
 import Users from './pages/User'
@@ -26,7 +27,9 @@ import Inventory from './pages/Inventory'
 import ImportExport from './pages/ImportExport'
 import Storage from './pages/Storage'
 
+
 import ProtectedWrapper from './routes/ProtectedWrapper';
+import NotFound from "./pages/Error/NotFound";
 
 const App = (props) => {
     // const dispatch = useDispatch();
@@ -62,6 +65,7 @@ const App = (props) => {
                <Route exact path="/products" element={<ProtectedWrapper><Products/></ProtectedWrapper>} />
                <Route exact path="/product/edit/:id" element={<ProtectedWrapper><ProductEdit/></ProtectedWrapper>} />
                <Route exact path="/product/add" element={<ProtectedWrapper><ProductAdd/></ProtectedWrapper>} />
+               <Route exact path="/product/detail/:id" element={<ProtectedWrapper><ProductDetail/></ProtectedWrapper>} />
 
                <Route exact path="/orders" element={<ProtectedWrapper><Orders/></ProtectedWrapper>} />
 
@@ -73,6 +77,7 @@ const App = (props) => {
 
                <Route exact path="/storage" element={<ProtectedWrapper><Storage/></ProtectedWrapper>} />
                
+               <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
 
