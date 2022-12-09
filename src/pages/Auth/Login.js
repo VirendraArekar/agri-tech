@@ -1,48 +1,87 @@
 import React, {useState} from 'react'
 import { Navigate } from "react-router-dom";
 import Title from '../../components/Title'
-
+import './style.css'
 const Login  = (props) => {
     const [token, setToken] = useState('')
     Title('Login')
     const onSubmit = async(e) => {
         e.preventDefault();
+        console.log('I am here')
         let data = await localStorage.setItem('token','I am Virendra Arekar');
         setToken(data);
     }
     return(
-        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <section className="vh-100">
             {token !== '' && (
             <Navigate to="/" replace={true} />
             )}
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6">
-                    <div class="border border-3 border-primary"></div>
-                    <div class="card bg-white shadow-lg">
-                    <div class="card-body p-5">
-                        <form class="mb-3 mt-md-4">
-                        <h2 class="fw-bold mb-2 text-uppercase ">Login</h2>
-                        <p class=" mb-5">Please enter your login and password!</p>
-                        <div class="mb-3">
-                            <label for="email" class="form-label ">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="name@gmail.com" />
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label ">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="*******" />
-                        </div>
-                        <div class="d-grid">
-                            <button class="btn btn-outline-dark" type="button" onClick={onSubmit}>Login</button>
-                        </div>
-                        </form>
+            <div className="container-fluid h-custom">
+                <div className="row d-flex justify-content-center align-items-center h-100">
+                <div className="col-md-9 col-lg-6 col-xl-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid"
+                    alt="Sample image" />
+                </div>
+                <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                    <form>
+                    {/* <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p className="lead fw-normal mb-0 me-3">Sign in with</p>
+                        <button type="button" className="btn btn-primary btn-floating mx-1">
+                        <i className="fab fa-facebook-f"></i>
+                        </button>
+
+                        <button type="button" className="btn btn-primary btn-floating mx-1">
+                        <i className="fab fa-twitter"></i>
+                        </button>
+
+                        <button type="button" className="btn btn-primary btn-floating mx-1">
+                        <i className="fab fa-linkedin-in"></i>
+                        </button>
+                    </div>
+
+                    <div className="divider d-flex align-items-center my-4">
+                        <p className="text-center fw-bold mx-3 mb-0">Or</p>
+                    </div> */}
+                    <h4 className='text-center mb-5'>Admin Login</h4>
+
+                   
+                    <div className="form-outline mb-4">
+                       <label className="form-label" htmlFor="form3Example3">Email address</label>
+                        <input type="email" id="form3Example3" style={{ fontSize : 17}} className="form-control form-control-lg"
+                        placeholder="Enter a valid email address" />
                         
                     </div>
+
+                   
+                    <div className="form-outline mb-3">
+                        <label className="form-label" htmlFor="form3Example4">Password</label>
+                        <input type="password" id="form3Example4" style={{ fontSize : 17}} className="form-control form-control-lg"
+                        placeholder="Enter password" />
                     </div>
+
+                    <div className="d-flex justify-content-between align-items-center">
+                       
+                        <div className="form-check mb-0">
+                        <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                        <label className="form-check-label" htmlFor="form2Example3">
+                            Remember me
+                        </label>
+                        </div>
+                        {/* <a href="#!" className="text-body">Forgot password?</a> */}
+                    </div>
+
+                    <div className="text-center text-lg-start mt-4 pt-2">
+                        <button type="button" className="btn btn-green btn-lg"
+                        style={{paddingLeft: '2.5rem', paddingRight: '2.5rem'}} onClick={onSubmit}>Login</button>
+                        {/* <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                            className="link-danger">Register</a></p> */}
+                    </div>
+
+                    </form>
                 </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
