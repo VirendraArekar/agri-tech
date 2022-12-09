@@ -19,9 +19,10 @@ import SubCategoryEdit from './pages/SubCategory/Edit'
 import Products from './pages/Product/List'
 import ProductAdd from './pages/Product/Add'
 import ProductEdit from './pages/Product/Edit'
-import ProductDetail from './pages/Product/Detail'
+
 
 import Orders from './pages/Order'
+import OrderDetail from './pages/Order/Detail'
 import Users from './pages/User'
 import Inventory from './pages/Inventory'
 import ImportExport from './pages/ImportExport'
@@ -65,9 +66,10 @@ const App = (props) => {
                <Route exact path="/products" element={<ProtectedWrapper><Products/></ProtectedWrapper>} />
                <Route exact path="/product/edit/:id" element={<ProtectedWrapper><ProductEdit/></ProtectedWrapper>} />
                <Route exact path="/product/add" element={<ProtectedWrapper><ProductAdd/></ProtectedWrapper>} />
-               <Route exact path="/product/detail/:id" element={<ProtectedWrapper><ProductDetail/></ProtectedWrapper>} />
+               
 
                <Route exact path="/orders" element={<ProtectedWrapper><Orders/></ProtectedWrapper>} />
+               <Route exact path="/order/detail/:id" element={<ProtectedWrapper><OrderDetail/></ProtectedWrapper>} />
 
                <Route exact path="/app-users" element={<ProtectedWrapper><Users/></ProtectedWrapper>} />
 
