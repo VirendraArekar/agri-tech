@@ -85,7 +85,7 @@ const Detail = (props) =>{
                     <div className="row px-4">
                         <div className="col-4">
                            <h6 className='box-title py-2' >
-                              <img src={require('../../assets/images/product.png')}  style={{width : 60}} className="mx-2"/>
+                              <img src={require('../../assets/images/product.png')}  style={{width : 60}} className="mx-2" alt="order 567"/>
                               Corn
                            </h6>
                         </div>
@@ -103,7 +103,7 @@ const Detail = (props) =>{
                     <div className="row px-4">
                         <div className="col-4">
                            <h6 className='box-title py-2' >
-                              <img src={require('../../assets/images/product.png')}  style={{width : 60}} className="mx-2"/>
+                              <img src={require('../../assets/images/product.png')}  style={{width : 60}} className="mx-2" alt="order 678"/>
                               Corn
                            </h6>
                         </div>

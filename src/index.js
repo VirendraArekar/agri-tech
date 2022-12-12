@@ -11,7 +11,7 @@ import { applyMiddleware, createStore } from "redux";
 import reducers from "./store/reducers";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 
 const store = createStore(reducers, applyMiddleware(thunk));
 

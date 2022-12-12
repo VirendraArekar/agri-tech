@@ -1,7 +1,7 @@
 import BreadCrumb from "../../components/BreadCrumb";
 import DataTable from 'react-data-table-component';
 import {FaPencilAlt,FaTrashAlt} from 'react-icons/fa'
-import { formatSlashDate, numberWithCommas } from "../../utils";
+import { numberWithCommas } from "../../utils";
 import Title from '../../components/Title'
 import React from "react";
 
@@ -12,7 +12,7 @@ const List = (props) =>{
         {
             name: <h5 style={{paddingTop : 20, paddingBottom : 20}}>Product</h5>,
             selector: row => <div>
-                               <img src={require('../../assets/images/product.png')}  style={{width : 50}}/>
+                               <img src={require('../../assets/images/product.png')}  style={{width : 50}} alt="order 65"/>
                                <div style={{fontSize : 16, fontWeight : 500, color :'#303030'}} className="d-inline-block mx-2">{row.name}</div>
                              </div>,
             style:{

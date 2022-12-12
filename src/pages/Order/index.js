@@ -1,6 +1,6 @@
 import BreadCrumb from "../../components/BreadCrumb";
 import DataTable from 'react-data-table-component';
-import {FaPencilAlt,FaTrashAlt} from 'react-icons/fa'
+import {FaTrashAlt} from 'react-icons/fa'
 import { formatSlashDate } from "../../utils";
 import React from "react";
 import {BsFillCircleFill} from 'react-icons/bs'

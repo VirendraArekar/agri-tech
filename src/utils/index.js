@@ -5,7 +5,7 @@
 export const imageExist = (url) =>{
    var img = new Image();
    img.src = url;
-   return img.height != 0 ? true : false;
+   return img.height !== 0 ? true : false;
 }
 
 export const apiErrors = (errors) => {

@@ -1,12 +1,11 @@
 import BreadCrumb from "../../components/BreadCrumb";
-import {FaAngleDown} from 'react-icons/fa'
 import DataTable from 'react-data-table-component';
-import {FaPencilAlt,FaTrashAlt} from 'react-icons/fa'
 import { formatSlashDate, numberWithCommas } from "../../utils";
 import './style.css'
 import React from "react";
 import {FaArrowUp , FaArrowDown} from 'react-icons/fa'
 import Title from '../../components/Title'
+import { Link } from "react-router-dom";
 const ImportExport = (props) =>{
     Title('Import Export')
     const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
@@ -14,7 +13,7 @@ const ImportExport = (props) =>{
         {
             name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Product</h6>,
             selector: row => <div>
-                               <img src={require('../../assets/images/product.png')}  style={{width : 50}}/>
+                               <img src={require('../../assets/images/product.png')}  style={{width : 50}} alt="import view"/>
                                <div style={{fontSize : 14, fontWeight : 500, color :'#303030'}} className="d-inline-block mx-2">Mustard</div>
                              </div>,
             style:{
@@ -33,7 +32,7 @@ const ImportExport = (props) =>{
         {
             name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Country</h6>,
             selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>
-                <a href="#" className="text-decoration-none">India</a>
+                <Link to="#" className="text-decoration-none">India</Link>
             </div>,
         },
         {
@@ -47,7 +46,7 @@ const ImportExport = (props) =>{
         {
             name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Supplier</h6>,
             selector: row =><div style={{fontSize : 14, fontWeight : 500, color :'#303030'}}>
-                                <a href="#" className="text-decoration-none">LKL Services</a>
+                                <Link to="#" className="text-decoration-none">LKL Services</Link>
                             </div>,
         },
         {

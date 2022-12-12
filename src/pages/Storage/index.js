@@ -1,11 +1,9 @@
 import BreadCrumb from "../../components/BreadCrumb";
-import {FaAngleDown} from 'react-icons/fa'
 import DataTable from 'react-data-table-component';
-import {FaPencilAlt,FaTrashAlt} from 'react-icons/fa'
-import { formatSlashDate, numberWithCommas } from "../../utils";
+import { formatSlashDate } from "../../utils";
 import './style.css'
 import React from "react";
-import {FaArrowUp , FaArrowDown, FaBoxOpen} from 'react-icons/fa'
+import {FaBoxOpen} from 'react-icons/fa'
 import {BsCurrencyDollar, BsClockHistory} from 'react-icons/bs'
 import {FiShoppingBag} from 'react-icons/fi'
 import Title from '../../components/Title'
@@ -16,7 +14,7 @@ const Storage = (props) =>{
         {
             name: <h6 style={{paddingTop : 20, paddingBottom : 20, fontSize : 16}}>Product</h6>,
             selector: row => <div>
-                               <img src={require('../../assets/images/product.png')}  style={{width : 50}}/>
+                               <img src={require('../../assets/images/product.png')}  style={{width : 50}} alt="product 11"/>
                                <div style={{fontSize : 14, fontWeight : 500, color :'#303030'}} className="d-inline-block mx-2">Mustard</div>
                              </div>,
             style:{

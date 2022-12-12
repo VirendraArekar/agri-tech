@@ -12,7 +12,7 @@ const List = (props) =>{
         {
             name: <h5 style={{paddingTop : 20, paddingBottom : 20}}>Image</h5>,
             selector: row => <>
-                               <img src={require('../../assets/images/product.png')}  style={{width : 70}}/>
+                               <img src={require('../../assets/images/product.png')}  style={{width : 70}} alt="category 45"/>
                                <div style={{fontSize : 18, fontWeight : 500, color :'#303030'}} className="d-inline-block mx-2">Lorel Ipsum</div>
                              </>,
             style:{
